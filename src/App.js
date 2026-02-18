@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { FaWind, FaTint } from "react-icons/fa";
 import "./App.css";
 
@@ -30,13 +30,7 @@ function App() {
     }
   };
 
-  const fetchWeatherByCoords = async (lat, lon) => {
-    const res = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
-    );
-    const data = await res.json();
-    setWeather(data);
-  };
+ 
 
   return (
     <div className="app">
